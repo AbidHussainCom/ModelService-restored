@@ -12,9 +12,41 @@
 
 #import "NetworkConstants.h"
 
+// Success and Failure Blocks
+typedef id   (^ResponseBlock) (id);
+typedef void (^SuccessBlock)(id);
+typedef void (^FailBlock) (id);
+
+// Define each request type here with Format RequestTypeXxxYyy.
+typedef enum{
+    RequestTypeGetEvents=0,
+}RequestType;
+
+// Request Method
+typedef enum{
+    RequestMethodPost,
+    RequestMethodGet,
+    RequestMethodPut,
+    RequestMethodDelete
+}RequestMethod;
+
 @interface BaseService : NSObject {
     
     AFHTTPRequestOperationManager *manager;
 }
+
+@property (assign) NSUInteger pageNumber;
+@property (assign) NSUInteger limit;
+@property (assign) NSUInteger maxRecords;
+@property (assign,getter = isRefreshing) BOOL refreshing;
+
+
+- (void) executeRequestType:(RequestType)_type
+              requestMethod:(RequestMethod)_method
+                        URL:(NSString*)_urlAction
+                 parameters:(NSMutableDictionary *)_params
+              responseBlock:(ResponseBlock)_response
+               successBlock:(SuccessBlock)_success
+               failureBlock:(FailBlock)_fail;
 
 @end
