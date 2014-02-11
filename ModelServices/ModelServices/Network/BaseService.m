@@ -105,23 +105,22 @@
     __block NSDictionary *info = [self infoWithRequestType:_type];
     
     
-    NSError *error = nil;
+    NSError *requestError = nil;
     NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:[self requestMethodWithType:_method]
                                                                       URLString:_urlAction
                                                                      parameters:_params
-                                                                          error:&error];
-    
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+                                                                          error:&requestError];
     
     AFHTTPRequestOperation *operation = [manager HTTPRequestOperationWithRequest:request
                                                                          success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                                                              
-                                                                             NSError *error = nil;
-                                                                             
-                                                                             id response = _response(responseObject);
+                                                                             NSError *jsonError = nil;
+                                                                             id JSON = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                                                                                       options:NSJSONReadingAllowFragments
+                                                                                                                         error:&jsonError];
+                                                                             id response = _response(JSON);
                                                                              
                                                                              if ([self validdateServerResponse:responseObject]) {
-                                                                                 
                                                                                  
                                                                                  NSDictionary *formattedResponse = [self responseDictionaryWithResponse:response
                                                                                                                                                    info:info];
@@ -147,6 +146,7 @@
                                                                                                                                           error:error
                                                                                                                                            info:info];
                                                                              _fail(formattedResponse);
+                                                                             self.refreshing = NO;
                                                                              
                                                                          }];
     

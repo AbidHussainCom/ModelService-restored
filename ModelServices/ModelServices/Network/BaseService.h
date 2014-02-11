@@ -13,9 +13,9 @@
 #import "NetworkConstants.h"
 
 // Success and Failure Blocks
-typedef id   (^ResponseBlock) (id);
-typedef void (^SuccessBlock)(id);
-typedef void (^FailBlock) (id);
+typedef id   (^ResponseBlock) (id response);
+typedef void (^SuccessBlock)(id response);
+typedef void (^FailBlock) (id response);
 
 // Define each request type here with Format RequestTypeXxxYyy.
 typedef enum{

@@ -10,4 +10,7 @@
 
 @interface ContentService : BaseService
 
+- (void)getContentsWithSuccessBlock:(SuccessBlock)_success
+                    andFailureBlock:(FailBlock)_fail;
+
 @end
