@@ -56,11 +56,11 @@
 - (void) appendPaginationAndLimitToParams:(NSMutableDictionary *)_params{
     
     if (self.pageNumber > 0) {
-        _params[@"offset"] = [NSString stringWithFormat:@"%d",self.pageNumber];
+        _params[@"offset"] = [NSString stringWithFormat:@"%lu",(unsigned long)self.pageNumber];
     }
     
     if (self.limit > 0) {
-        _params[@"limit"] = [NSString stringWithFormat:@"%d",self.limit];
+        _params[@"limit"] = [NSString stringWithFormat:@"%lu",(unsigned long)self.limit];
     }
     
 }
@@ -99,30 +99,31 @@
     self.refreshing = YES;
     
     // Append Pagination and limit
-    [self appendPaginationAndLimitToParams:_params];
+    //[self appendPaginationAndLimitToParams:_params];
+    
+    // Append Authentication
+    //_params[API_KEY]=API_KEY_VALUE;
     
     // Request Info
     __block NSDictionary *info = [self infoWithRequestType:_type];
     
+    NSString *string = @"http://openexchangerates.org/api/latest.json?app_id=bc4edc57c5954fdd8ca80b1bb985f613";
     
     NSError *requestError = nil;
     NSMutableURLRequest *request = [manager.requestSerializer requestWithMethod:[self requestMethodWithType:_method]
-                                                                      URLString:_urlAction
+                                                                      URLString:string
                                                                      parameters:_params
                                                                           error:&requestError];
     
     AFHTTPRequestOperation *operation = [manager HTTPRequestOperationWithRequest:request
                                                                          success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                                                              
-                                                                             NSError *jsonError = nil;
-                                                                             id JSON = [NSJSONSerialization JSONObjectWithData:responseObject
-                                                                                                                       options:NSJSONReadingAllowFragments
-                                                                                                                         error:&jsonError];
-                                                                             id response = _response(JSON);
+                                                                             NSDictionary *response = (NSDictionary*)responseObject;
                                                                              
                                                                              if ([self validdateServerResponse:responseObject]) {
                                                                                  
-                                                                                 NSDictionary *formattedResponse = [self responseDictionaryWithResponse:response
+                                                                                 NSArray *parsedResponse = _response(response);
+                                                                                 NSDictionary *formattedResponse = [self responseDictionaryWithResponse:parsedResponse
                                                                                                                                                    info:info];
                                                                                  _success(formattedResponse);
                                                                                  

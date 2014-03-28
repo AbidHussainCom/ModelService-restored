@@ -17,14 +17,25 @@ PODS:
   - AFNetworking/Serialization (2.1.0)
   - AFNetworking/UIKit (2.1.0):
     - AFNetworking/NSURLConnection
+  - FPBrandColors (0.1.3)
+  - MHVideoPhotoGallery (1.3):
+    - SDWebImage (~> 3.5.2)
   - ObjectiveSugar (1.1.0)
+  - SDWebImage (3.5.2):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.5.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - FPBrandColors (~> 0.1.3)
+  - MHVideoPhotoGallery (~> 1.3)
   - ObjectiveSugar
 
 SPEC CHECKSUMS:
   AFNetworking: c7d7901a83f631414c7eda1737261f696101a5cd
+  FPBrandColors: e0df3950b283d1a6d6c42d6b97f04a031ccf9e12
+  MHVideoPhotoGallery: 7f03581f9727422a857e121933cde2ccfac9b037
   ObjectiveSugar: fed588577bcf9733546aeaa089de444e4bab9a52
+  SDWebImage: fe7ce01ae4e0a884d168f59c9dd82d35baf8429e
 
 COCOAPODS: 0.29.0

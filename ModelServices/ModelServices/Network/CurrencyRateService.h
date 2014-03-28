@@ -8,7 +8,7 @@
 
 #import "BaseService.h"
 
-@interface ContentService : BaseService
+@interface CurrencyRateService : BaseService
 
 - (void)getContentsWithSuccessBlock:(SuccessBlock)_success
                     andFailureBlock:(FailBlock)_fail;

@@ -6,14 +6,19 @@
 //  Copyright (c) 2014 Coeus Solutions GmbH. All rights reserved.
 //
 
-#import "ContentService.h"
+#import "CurrencyRateService.h"
+#import "CurrencyRate.h"
 
-#define URL_ACTION @"content"
+@implementation CurrencyRateService
 
-@implementation ContentService
 
 - (NSArray*)parse:(id)response{
-    return @[];
+    
+    NSDictionary *responseDict = (NSDictionary*)response;
+    
+    CurrencyRate *rate = [[CurrencyRate alloc] initWithDictionary:responseDict];
+    
+    return @[rate];
 }
 
 - (void)getContentsWithSuccessBlock:(SuccessBlock)_success
@@ -22,9 +27,9 @@
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     // Initialize Parameters here
     
-    [self executeRequestType:RequestTypeGetEvents
+    [self executeRequestType:RequestTypeGetCurrencyRates
                requestMethod:RequestMethodGet
-                         URL:URL_ACTION
+                         URL:LATEST_RATES_URI
                   parameters:parameters
                responseBlock:^id(id response) {
                    

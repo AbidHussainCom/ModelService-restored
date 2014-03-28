@@ -9,4 +9,7 @@
     #import <MobileCoreServices/MobileCoreServices.h>
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "UIColor+FPBrandColor.h"
+    #import "NetworkConstants.h"
+    #import "RateViewController.h"
 #endif

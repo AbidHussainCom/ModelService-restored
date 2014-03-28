@@ -9,11 +9,14 @@
 #ifndef ModelServices_NetworkConstants_h
 #define ModelServices_NetworkConstants_h
 
-#define BASE_URL @"http://www.google.com/"
+#define BASE_URL @"http://openexchangerates.org/api/"
+#define LATEST_RATES_URI @"latest.json/"
 
 //*********************************************************************************************//
 #pragma mark - General
 //*********************************************************************************************//
+#define API_KEY                 @"api_id"
+#define API_KEY_VALUE           @"bc4edc57c5954fdd8ca80b1bb985f613"
 #define ERROR                   @"error"
 #define MESSAGE                 @"message"
 #define REQUEST_TYPE            @"request_type"
@@ -25,20 +28,21 @@
 #define PROPERTY                @"property"
 #define SORT                    @"sort"
 #define VALUE                   @"value"
-#define SUCCESS_STATUS          @"S_OK"
-#define FAILURE_STATUS          @"S_FAIL"
-#define INTERNAL_ERROR_STATUS   @"S_INTERNAL"
 #define LIMIT                   @"limit"
 #define OFFSET                  @"offset"
 #define FILTER                  @"filter"
 #define DESCRIPTION             @"description"
 #define ID                      @"id"
 #define RESULTS                 @"results"
-#define GEOMETRY                @"geometry"
-#define LAT                     @"lat"
-#define LNG                     @"lng"
-#define NAME                    @"name"
 #define MAX_ROWS                @"max_rows"
+
+//*********************************************************************************************//
+#pragma mark - Rates
+//*********************************************************************************************//
+#define BASE            @"base"
+#define RATES           @"rates"
+#define TIMESTAMP       @"timestamp"
+#define DISCLAIMER      @"disclaimer"
 
 
 #endif

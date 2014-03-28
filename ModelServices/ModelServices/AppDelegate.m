@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
 #import "AFNetworkActivityIndicatorManager.h"
+#import "RateViewController.h"
 
 @implementation AppDelegate
 
@@ -18,10 +18,13 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:8 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
     [NSURLCache setSharedURLCache:URLCache];
     
-    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    UIViewController *viewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor Atlassian]];
+    
+    RateViewController *rateCtr = [RateViewController new];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:rateCtr];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.navigationController;

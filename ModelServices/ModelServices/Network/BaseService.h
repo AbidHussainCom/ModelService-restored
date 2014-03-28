@@ -19,7 +19,7 @@ typedef void (^FailBlock) (id response);
 
 // Define each request type here with Format RequestTypeXxxYyy.
 typedef enum{
-    RequestTypeGetEvents=0,
+    RequestTypeGetCurrencyRates=0,
 }RequestType;
 
 // Request Method

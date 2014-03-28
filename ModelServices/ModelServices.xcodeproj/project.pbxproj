@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A2FBB118538A45BC966F814C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C48FF9DAC04E77B690B79A /* libPods.a */; };
-		F8441E3518A8A112005FC632 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8441E3318A8A112005FC632 /* ContentViewController.m */; };
-		F8441E3618A8A112005FC632 /* ContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8441E3418A8A112005FC632 /* ContentViewController.xib */; };
-		F8441E3918A8A167005FC632 /* ContentService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8441E3818A8A167005FC632 /* ContentService.m */; };
+		F8441E3918A8A167005FC632 /* CurrencyRateService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8441E3818A8A167005FC632 /* CurrencyRateService.m */; };
+		F8ABBF4A18B2437600262C26 /* RateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8ABBF4818B2437600262C26 /* RateViewController.m */; };
+		F8ABBF4B18B2437600262C26 /* RateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8ABBF4918B2437600262C26 /* RateViewController.xib */; };
+		F8D812BD18B23ABF00CA3106 /* CurrencyRate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D812BC18B23ABF00CA3106 /* CurrencyRate.m */; };
+		F8EACE0818B3560D0046C641 /* ResourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EACE0618B3560D0046C641 /* ResourceViewController.m */; };
+		F8EACE0918B3560D0046C641 /* ResourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8EACE0718B3560D0046C641 /* ResourceViewController.xib */; };
 		F8F1A9FC18A509BB00849AE9 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F1A9FB18A509BB00849AE9 /* BaseService.m */; };
 		F8FC7B8518A4F353000C249E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FC7B8418A4F353000C249E /* Foundation.framework */; };
 		F8FC7B8718A4F353000C249E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FC7B8618A4F353000C249E /* CoreGraphics.framework */; };
@@ -40,11 +43,16 @@
 /* Begin PBXFileReference section */
 		16C48FF9DAC04E77B690B79A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C27B5AE2074037815175CA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		F8441E3218A8A112005FC632 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
-		F8441E3318A8A112005FC632 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
-		F8441E3418A8A112005FC632 /* ContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentViewController.xib; sourceTree = "<group>"; };
-		F8441E3718A8A167005FC632 /* ContentService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentService.h; sourceTree = "<group>"; };
-		F8441E3818A8A167005FC632 /* ContentService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentService.m; sourceTree = "<group>"; };
+		F8441E3718A8A167005FC632 /* CurrencyRateService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyRateService.h; sourceTree = "<group>"; };
+		F8441E3818A8A167005FC632 /* CurrencyRateService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyRateService.m; sourceTree = "<group>"; };
+		F8ABBF4718B2437600262C26 /* RateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateViewController.h; sourceTree = "<group>"; };
+		F8ABBF4818B2437600262C26 /* RateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateViewController.m; sourceTree = "<group>"; };
+		F8ABBF4918B2437600262C26 /* RateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RateViewController.xib; sourceTree = "<group>"; };
+		F8D812BB18B23ABF00CA3106 /* CurrencyRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyRate.h; sourceTree = "<group>"; };
+		F8D812BC18B23ABF00CA3106 /* CurrencyRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyRate.m; sourceTree = "<group>"; };
+		F8EACE0518B3560D0046C641 /* ResourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceViewController.h; sourceTree = "<group>"; };
+		F8EACE0618B3560D0046C641 /* ResourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceViewController.m; sourceTree = "<group>"; };
+		F8EACE0718B3560D0046C641 /* ResourceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResourceViewController.xib; sourceTree = "<group>"; };
 		F8F1A9FA18A509BB00849AE9 /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
 		F8F1A9FB18A509BB00849AE9 /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
 		F8F1A9FD18A50BEB00849AE9 /* NetworkConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkConstants.h; sourceTree = "<group>"; };
@@ -92,21 +100,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F8441E3018A8A0E2005FC632 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F8441E3218A8A112005FC632 /* ContentViewController.h */,
-				F8441E3318A8A112005FC632 /* ContentViewController.m */,
-				F8441E3418A8A112005FC632 /* ContentViewController.xib */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		F8441E3118A8A0E2005FC632 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F8D812BB18B23ABF00CA3106 /* CurrencyRate.h */,
+				F8D812BC18B23ABF00CA3106 /* CurrencyRate.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F8ABBF4618B2436800262C26 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F8ABBF4718B2437600262C26 /* RateViewController.h */,
+				F8ABBF4818B2437600262C26 /* RateViewController.m */,
+				F8ABBF4918B2437600262C26 /* RateViewController.xib */,
+				F8EACE0518B3560D0046C641 /* ResourceViewController.h */,
+				F8EACE0618B3560D0046C641 /* ResourceViewController.m */,
+				F8EACE0718B3560D0046C641 /* ResourceViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F8FC7B7818A4F353000C249E = {
@@ -144,7 +157,7 @@
 		F8FC7B8A18A4F353000C249E /* ModelServices */ = {
 			isa = PBXGroup;
 			children = (
-				F8441E3018A8A0E2005FC632 /* Controller */,
+				F8ABBF4618B2436800262C26 /* Controller */,
 				F8441E3118A8A0E2005FC632 /* Model */,
 				F8FC7BB918A506FE000C249E /* Network */,
 				F8FC7B8B18A4F353000C249E /* Podfile */,
@@ -191,8 +204,8 @@
 				F8F1A9FA18A509BB00849AE9 /* BaseService.h */,
 				F8F1A9FB18A509BB00849AE9 /* BaseService.m */,
 				F8F1A9FD18A50BEB00849AE9 /* NetworkConstants.h */,
-				F8441E3718A8A167005FC632 /* ContentService.h */,
-				F8441E3818A8A167005FC632 /* ContentService.m */,
+				F8441E3718A8A167005FC632 /* CurrencyRateService.h */,
+				F8441E3818A8A167005FC632 /* CurrencyRateService.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -274,9 +287,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8441E3618A8A112005FC632 /* ContentViewController.xib in Resources */,
+				F8EACE0918B3560D0046C641 /* ResourceViewController.xib in Resources */,
 				F8FC7B9D18A4F353000C249E /* Images.xcassets in Resources */,
 				F8FC7B8C18A4F353000C249E /* Podfile in Resources */,
+				F8ABBF4B18B2437600262C26 /* RateViewController.xib in Resources */,
 				F8FC7B9618A4F353000C249E /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,9 +343,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8441E3518A8A112005FC632 /* ContentViewController.m in Sources */,
+				F8D812BD18B23ABF00CA3106 /* CurrencyRate.m in Sources */,
 				F8F1A9FC18A509BB00849AE9 /* BaseService.m in Sources */,
-				F8441E3918A8A167005FC632 /* ContentService.m in Sources */,
+				F8ABBF4A18B2437600262C26 /* RateViewController.m in Sources */,
+				F8441E3918A8A167005FC632 /* CurrencyRateService.m in Sources */,
+				F8EACE0818B3560D0046C641 /* ResourceViewController.m in Sources */,
 				F8FC7B9818A4F353000C249E /* main.m in Sources */,
 				F8FC7B9B18A4F353000C249E /* AppDelegate.m in Sources */,
 			);
@@ -408,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -441,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
