@@ -12,7 +12,7 @@
 @implementation CurrencyRateService
 
 
-- (NSArray*)parse:(id)response{
+- (NSArray*)parse:(id)response {
     
     NSDictionary *responseDict = (NSDictionary*)response;
     

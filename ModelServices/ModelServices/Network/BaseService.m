@@ -15,9 +15,10 @@
     self  = [super init];
     
     if (self) {
+        
         manager  = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:nil]];
-        //manager.requestSerializer = [AFJSONRequestSerializer serializer];
-        //manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        manager.requestSerializer =  [AFJSONRequestSerializer serializer];
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
     }
     return self;
 }
@@ -104,12 +105,10 @@
     //[self appendPaginationAndLimitToParams:_params];
     
     // Append Authentication
-    _params[API_KEY]=API_KEY_VALUE;
+    //_params[API_KEY]=API_KEY_VALUE;
     
     // Request Info
     __block NSDictionary *info = [self infoWithRequestType:_type];
-    
-    //?app_id=bc4edc57c5954fdd8ca80b1bb985f613
     
     NSString *string = @"http://openexchangerates.org/api/latest.json";
     
@@ -118,8 +117,6 @@
                                                                       URLString:string
                                                                      parameters:_params
                                                                           error:&requestError];
-    
-    //[request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     AFHTTPRequestOperation *operation = [manager HTTPRequestOperationWithRequest:request
                                                                          success:^(AFHTTPRequestOperation *operation, id responseObject) {
